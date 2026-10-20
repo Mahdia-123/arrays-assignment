@@ -1,11 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrays</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Performance Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <script src="app.js"></script>
+  <header class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">ACADEMIC DASHBOARD</span>
+      <h1>Student Performance</h1>
+      <p>Analyze scores, track progress, and celebrate achievements.</p>
+    </div>
+    <div class="hero-icon">🎓</div>
+  </header>
+
+  <main class="container">
+    <section class="stats-grid" id="stats">
+      <!-- Summary cards will be added by JavaScript -->
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">STUDENT DIRECTORY</span>
+          <h2>All Students</h2>
+        </div>
+        <span class="count-badge" id="studentCount">0 students</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Student Name</th>
+              <th>Score</th>
+              <th>Performance</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="studentTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="results-grid">
+      <article class="panel">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">SUCCESS</span>
+            <h2>Passing Students</h2>
+          </div>
+          <span class="heading-icon green-icon">✓</span>
+        </div>
+        <ul class="student-list" id="passingList"></ul>
+      </article>
+
+      <article class="panel">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">NEEDS IMPROVEMENT</span>
+            <h2>Failing Students</h2>
+          </div>
+          <span class="heading-icon red-icon">!</span>
+        </div>
+        <ul class="student-list" id="failingList"></ul>
+      </article>
+    </section>
+
+    <section class="results-grid">
+      <article class="panel">
+        <span class="eyebrow">LEADERBOARD</span>
+        <h2>Top Three Students 🏆</h2>
+        <div id="topThree" class="leaderboard"></div>
+      </article>
+
+      <article class="panel">
+        <span class="eyebrow">STUDENT SEARCH</span>
+        <h2>Find a Student</h2>
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Enter a student name..."
+            aria-label="Search student by name"
+          >
+          <button id="searchButton" type="button">Search</button>
+        </div>
+        <div id="searchResult" class="search-result">
+          Search for a student to see their score.
+        </div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <span class="eyebrow">CLASS INSIGHTS</span>
+      <h2>Performance Overview</h2>
+      <div id="insights" class="insights-grid"></div>
+    </section>
+
+    <footer>
+      <p>Student Performance Analysis System</p>
+      <span>Built with HTML, CSS & JavaScript</span>
+    </footer>
+  </main>
+   <script src="script.js"></script>
 </body>
 </html>
